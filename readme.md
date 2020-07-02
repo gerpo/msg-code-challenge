@@ -123,6 +123,7 @@ For all options that are supported right know you can use defined constants to s
 - Type: Boolean
 - Descriptions: Determines if the whole itinerary is printed to the console after solving.
 
+<!-- -->
 
 - Option name: show_visualization
 - Default option: ```True```
@@ -130,6 +131,7 @@ For all options that are supported right know you can use defined constants to s
 - Descriptions: Determines if the solution is visualized after solving.
 - Info: Uses ```plotly``` and opens a browser window to show the interactive visualization.
 
+<!-- -->
 
 - Option name: visualization_options
 - Default option: ```{'animate_visualization': True, 'export_as_image': False}```
