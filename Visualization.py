@@ -1,5 +1,4 @@
 import os
-import subprocess
 
 import numpy as np
 import plotly.graph_objects as go
@@ -88,7 +87,9 @@ def visualize(locations: list, order: np.ndarray, options: dict) -> None:
         fig.show()
 
     if export_as_image:
-        json_export_file = os.path.join('results', 'json', f'{export_name}.json')
         image_export_dir = os.path.join('results', 'images')
-        fig.write_json(json_export_file)
-        subprocess.call(['orca', 'graph', json_export_file, '-f', 'svg', '-d', image_export_dir], shell=True)
+        image_export_file = os.path.join(image_export_dir, f'{export_name}.svg')
+        if not os.path.exists(image_export_dir):
+            os.mkdir(image_export_dir)
+
+        fig.write_image(image_export_file)

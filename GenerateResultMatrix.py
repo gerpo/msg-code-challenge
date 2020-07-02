@@ -15,10 +15,8 @@ Variables that can be adjusted.
 
 """
 input_file = 'msg_standorte_deutschland.csv'
-distance_type = Constants.VINCENTY_DISTANCE
-solver_type = Constants.ORTOOLS_SOLVER
-
-print_itinerary = False
+distance_set = np.array([Constants.EUCLIDEAN_DISTANCE, Constants.HAVERSINE_DISTANCE, Constants.VINCENTY_DISTANCE, Constants.GREAT_CIRCLE_DISTANCE])
+solver_set = np.array([Constants.MLROSE_SOLVER, Constants.LKH_SOLVER, Constants.ORTOOLS_SOLVER])
 
 visualization_options = {
     'show_visualization': False,
@@ -30,8 +28,6 @@ visualization_options = {
 The following does not need to be changed.
 """
 
-distance_set = np.array([Constants.EUCLIDEAN_DISTANCE, Constants.HAVERSINE_DISTANCE, Constants.VINCENTY_DISTANCE, Constants.GREAT_CIRCLE_DISTANCE])
-solver_set = np.array([Constants.MLROSE_SOLVER, Constants.LKH_SOLVER, Constants.ORTOOLS_SOLVER])
 matrix = np.array(np.meshgrid(solver_set, distance_set)).T.reshape(-1, 2)
 
 dataframe_data = {}

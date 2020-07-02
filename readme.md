@@ -1,4 +1,8 @@
 # Solution for msg Code Challenge
+<p style="text-align: center;">
+<img src="results/example.gif" height="500px" alt="Example Path" />
+</p>
+
 ## Task
 Given a set of locations, you are supposed to find a path between these locations so that you visit 
 each one of them exactly once. You shall finish at the location you start from (Ismaning/München (Hauptsitz)) and you 
@@ -65,7 +69,7 @@ For all options that are supported right know you can use defined constants to s
 
 ### Distance Calculator
 - Option name: distance_type
-- Default option: ```Constants.VINCENTY_DISTANCE```
+- Default option: ```Constants.GREAT_CIRCLE_DISTANCE```
 - Type: String
 - Options:
     - ```Constants.EUCLIDEAN_DISTANCE```  
@@ -125,25 +129,21 @@ For all options that are supported right know you can use defined constants to s
 
 <!-- -->
 
-- Option name: show_visualization
-- Default option: ```True```
-- Type: Boolean
-- Descriptions: Determines if the solution is visualized after solving.
-- Info: Uses ```plotly``` and opens a browser window to show the interactive visualization.
-
-<!-- -->
-
 - Option name: visualization_options
 - Default option: ```{'animate_visualization': True, 'export_as_image': False}```
 - Type: dict
 - Descriptions: Contains a dictionary with two options.
+    - ```show_visualization```  
+        If ```True``` interactive visualization will be shown in browser.  
+        If ```False``` no visual output will be shown.
     - ```animate_visualization```  
         If ```True``` path will be animated after clicking a play button.  
-        If ```False``` full circle path is shown directly.
+        If ```False``` full circle path is shown directly.  
+        **Info**: This options is only relevant if ```show_visualization``` is ```True```.
     - ```export_as_image```  
         If ```True``` image if full circle path is saved.  
         If ```False``` only the interactive visualization is shown.
-- Info: this options is only relevant if ```show_visualization``` is ```True```.
+        **Info**: In order to use the export orca needs to be installed. [Link](https://plotly.com/python/static-image-export/)
 
 # Results
 | Solver \ Distance Calc. 	| euclidean                                                                               	| haversine                                                                               	| vincenty                                                                               	| great_circle                                                                                	|

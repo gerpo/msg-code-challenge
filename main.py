@@ -12,14 +12,14 @@ Variables that can be adjusted.
 
 """
 input_file = 'msg_standorte_deutschland.csv'
-distance_type = Constants.VINCENTY_DISTANCE
-solver_type = Constants.MLROSE_SOLVER
+distance_type = Constants.GREAT_CIRCLE_DISTANCE
+solver_type = Constants.ORTOOLS_SOLVER
 
 print_itinerary = True
 
 visualization_options = {
     'show_visualization': True,
-    'animate_visualization': False,
+    'animate_visualization': True,
     'export_as_image': False}
 
 #############################################################
