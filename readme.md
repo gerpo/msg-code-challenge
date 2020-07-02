@@ -17,11 +17,11 @@ order to be able to consider different requirements.
 To run this solution the following steps are needed:
 1. Clone the Repo
     ```shell
-    git clone *
+    git clone https://github.com/gerpo/msg-code-challenge.git
     ```
 2. Change into directory
     ```shell
-   cd *
+   cd msg-code-challenge
    ```
 3. Create virtual environment (optional but highly recommended to not fill global space)
     ```shell
